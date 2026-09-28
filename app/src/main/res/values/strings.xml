@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AZB-SataAndagi</string>
+    <string name="nama_snack">Sata Andagi</string>
+    <string name="welcome">Welcome to My Project</string>
+    <string name="gizi_snack">Komposisi Gizi Per 100 Gram:\n- Energi Total: 368 kkal\n- Lemak Total: 12,5g\n- Protein: 6,5g\n- Karbohidrat: 54g</string>
+</resources>
+
