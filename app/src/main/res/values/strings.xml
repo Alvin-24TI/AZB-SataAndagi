@@ -1,7 +1,24 @@
 <resources>
-    <string name="app_name">AZB-SataAndagi</string>
+    <string name="app_name">Sobremesa</string>
+    <string name="app_title">Sobremesa</string>
+    <string name="app_subtitle">Sata Andagi App</string>
     <string name="nama_snack">Sata Andagi</string>
-    <string name="welcome">Welcome to My Project</string>
+    <string name="welcome">Selamat Datang di Sobremesa</string>
+    <string name="tagline">Snack Khas Okinawa - Sata Andagi</string>
     <string name="gizi_snack">Komposisi Gizi Per 100 Gram:\n- Energi Total: 368 kkal\n- Lemak Total: 12,5g\n- Protein: 6,5g\n- Karbohidrat: 54g</string>
-</resources>
 
+    <!-- Toolbar Titles -->
+    <string name="title_main">Sobremesa</string>
+    <string name="title_detail">Detail Snack</string>
+    <string name="title_home">Home Page</string>
+    <string name="title_profile">Profile Page</string>
+    <string name="title_membership">Membership</string>
+    <string name="title_web">YouTube Web Page</string>
+
+    <!-- Button Labels -->
+    <string name="btn_home">Ke Halaman Home</string>
+    <string name="btn_detail">Detail Snack</string>
+    <string name="btn_youtube">Buka YouTube (Web)</string>
+    <string name="btn_profile">Lihat Profile</string>
+    <string name="btn_membership">Lihat Membership</string>
+</resources>
