@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
-                android:text="Profil Pengguna"
+                android:text="@string/title_profile"
                 android:textColor="@color/primary_dark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -75,6 +75,7 @@
                     android:padding="16dp">
 
                     <TextView
+                        android:id="@+id/tvProfileName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/jetbrains_mono_regular"
@@ -83,6 +84,7 @@
                         android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/tvProfileEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -103,6 +105,34 @@
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- Developer Profile Button -->
+            <Button
+                android:id="@+id/btnDevProfile"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="@string/btn_developer_profile"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/accent"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="@string/btn_logout"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
 
         </LinearLayout>
     </ScrollView>

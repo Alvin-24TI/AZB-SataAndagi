@@ -70,6 +70,20 @@
                 android:textStyle="bold"
                 app:cornerRadius="12dp" />
 
+            <!-- Developer Profile Button -->
+            <Button
+                android:id="@+id/btnDeveloperProfile"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/primary_dark"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="@string/btn_developer_profile"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
             <!-- Membership Menu Button -->
             <Button
                 android:id="@+id/btnMembership"

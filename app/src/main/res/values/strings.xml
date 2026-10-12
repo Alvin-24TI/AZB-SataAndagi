@@ -4,7 +4,6 @@
     <string name="app_subtitle">Sata Andagi App</string>
     <string name="nama_snack">Sata Andagi</string>
     <string name="welcome">Selamat Datang di Sobremesa</string>
-    <string name="tagline">Snack Khas Okinawa - Sata Andagi</string>
     <string name="gizi_snack">Komposisi Gizi Per 100 Gram:\n- Energi Total: 368 kkal\n- Lemak Total: 12,5g\n- Protein: 6,5g\n- Karbohidrat: 54g</string>
 
     <!-- Toolbar Titles -->
@@ -14,6 +13,8 @@
     <string name="title_profile">Profile Page</string>
     <string name="title_membership">Membership</string>
     <string name="title_web">YouTube Web Page</string>
+    <string name="title_login">Login Akun</string>
+    <string name="title_developer_profile">Developer Profile</string>
 
     <!-- Button Labels -->
     <string name="btn_home">Ke Halaman Home</string>
@@ -21,4 +22,17 @@
     <string name="btn_youtube">Buka YouTube (Web)</string>
     <string name="btn_profile">Lihat Profile</string>
     <string name="btn_membership">Lihat Membership</string>
+    <string name="btn_developer_profile">Profil Developer</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_logout">Logout</string>
+
+    <!-- General Strings -->
+    <string name="splash_footer">Sobremesa App v1.0</string>
+    <string name="login_subtitle">Silahkan login ke akun Anda</string>
+    <string name="hint_username">Username / Email</string>
+    <string name="hint_password">Password</string>
+    <string name="login_empty_error">Username dan password tidak boleh kosong!</string>
+    <string name="login_success">Login Berhasil!</string>
+    <string name="logout_success">Anda telah keluar dari akun.</string>
+    <string name="login_pref_info">Status login (isLogin) akan disimpan secara otomatis menggunakan SharedPreferences.</string>
 </resources>

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.azb_sataandagi.DetailActivity
+import com.example.azb_sataandagi.DeveloperProfileActivity
 import com.example.azb_sataandagi.R
 import com.example.azb_sataandagi.WebActivity
 import com.example.azb_sataandagi.databinding.ActivityHomePageBinding
@@ -41,6 +42,11 @@ class HomePageActivity : AppCompatActivity() {
 
         binding.btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnDeveloperProfile.setOnClickListener {
+            val intent = Intent(this, DeveloperProfileActivity::class.java)
             startActivity(intent)
         }
 
