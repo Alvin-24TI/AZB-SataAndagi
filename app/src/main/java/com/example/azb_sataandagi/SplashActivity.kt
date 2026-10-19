@@ -27,6 +27,8 @@ class SplashActivity : AppCompatActivity() {
         }
 
 
+        sessionManager = SessionManager(this)
+
         val alreadyShown = sessionManager.isSplashShown
         sessionManager.isSplashShown = true
 

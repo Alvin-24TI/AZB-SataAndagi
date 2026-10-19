@@ -16,6 +16,11 @@
     <string name="title_login">Login Akun</string>
     <string name="title_developer_profile">Developer Profile</string>
 
+    <!-- Bottom Navigation Labels -->
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_others">Lainnya</string>
+
     <!-- Button Labels -->
     <string name="btn_home">Ke Halaman Home</string>
     <string name="btn_detail">Detail Snack</string>
