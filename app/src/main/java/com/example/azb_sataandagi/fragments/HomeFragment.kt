@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.azb_sataandagi.DetailActivity
-import com.example.azb_sataandagi.Project.HomePageActivity
+import com.example.azb_sataandagi.Pages.HomePageActivity
 import com.example.azb_sataandagi.WebActivity
 import com.example.azb_sataandagi.databinding.FragmentHomeBinding
 import com.example.azb_sataandagi.utils.SessionManager

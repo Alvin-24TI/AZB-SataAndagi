@@ -31,10 +31,12 @@ class ProfileFragment : Fragment() {
 
         val ctx = requireContext()
         val sessionManager = SessionManager(ctx)
-        val user = sessionManager.username.ifEmpty { "User" }
+        val name = sessionManager.fullName.ifEmpty { sessionManager.username.ifEmpty { "User" } }
+        val username = sessionManager.username.ifEmpty { "User" }
+        val phone = sessionManager.phone.ifEmpty { "-" }
 
-        binding.tvProfileName.text = "Nama: $user"
-        binding.tvProfileEmail.text = "Email: ${user.lowercase()}@gmail.com"
+        binding.tvProfileName.text = "Nama: $name"
+        binding.tvProfileEmail.text = "Username: $username | No HP: $phone"
 
         binding.btnDevProfile.setOnClickListener {
             startActivity(Intent(ctx, DeveloperProfileActivity::class.java))

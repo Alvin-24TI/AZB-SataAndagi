@@ -28,28 +28,45 @@ class LoginActivity : AppCompatActivity() {
 
         sessionManager = SessionManager(this)
 
+        val regUserFromIntent = intent.getStringExtra("REGISTERED_USERNAME")
+        if (!regUserFromIntent.isNullOrEmpty()) {
+            binding.etUsername.setText(regUserFromIntent)
+        } else if (sessionManager.registeredUsername.isNotEmpty()) {
+            binding.etUsername.setText(sessionManager.registeredUsername)
+        }
+
         binding.btnLogin.setOnClickListener {
             val username = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Username dan password tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+            val regUser = sessionManager.registeredUsername
+            val regPass = sessionManager.registeredPassword
 
-            } else if (username == password) {
-                // Kondisi TRUE: Username dan password sama
+            val isValidLogin = if (regUser.isNotEmpty()) {
+                (username == regUser && password == regPass) || (username == password)
+            } else {
+                username == password
+            }
+
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, getString(R.string.login_empty_error), Toast.LENGTH_SHORT).show()
+            } else if (isValidLogin) {
                 sessionManager.isLogin = true
                 sessionManager.username = username
 
-                Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-
             } else {
-                // Kondisi FALSE: Username dan password berbeda
-                Toast.makeText(this, "Login Gagal!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login Gagal! Username atau password salah.", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.btnGoToRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
 

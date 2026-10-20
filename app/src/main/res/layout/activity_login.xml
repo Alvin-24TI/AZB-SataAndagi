@@ -133,6 +133,19 @@
                         android:textStyle="bold"
                         app:cornerRadius="12dp" />
 
+                    <TextView
+                        android:id="@+id/btnGoToRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/jetbrains_mono_regular"
+                        android:padding="8dp"
+                        android:text="@string/btn_to_register"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

@@ -14,6 +14,8 @@
     <string name="title_membership">Membership</string>
     <string name="title_web">YouTube Web Page</string>
     <string name="title_login">Login Akun</string>
+    <string name="title_register">Registrasi Akun</string>
+    <string name="title_otp">Verifikasi OTP</string>
     <string name="title_developer_profile">Developer Profile</string>
 
     <!-- Bottom Navigation Labels -->
@@ -30,13 +32,28 @@
     <string name="btn_developer_profile">Profil Developer</string>
     <string name="btn_login">Login</string>
     <string name="btn_logout">Logout</string>
+    <string name="btn_register">Daftar Akun</string>
+    <string name="btn_verify_otp">Verifikasi OTP</string>
+    <string name="btn_to_register">Belum punya akun? Registrasi disini</string>
+    <string name="btn_to_login">Sudah punya akun? Login</string>
 
     <!-- General Strings -->
     <string name="splash_footer">Sobremesa App v1.0</string>
     <string name="login_subtitle">Silahkan login ke akun Anda</string>
+    <string name="register_subtitle">Silahkan isi data untuk mendaftar akun baru</string>
+    <string name="otp_subtitle">Masukkan kode OTP untuk memverifikasi pendaftaran Anda</string>
+    <string name="hint_nama">Nama Lengkap</string>
+    <string name="hint_phone">Nomor Handphone</string>
     <string name="hint_username">Username / Email</string>
     <string name="hint_password">Password</string>
+    <string name="hint_otp">Kode OTP</string>
     <string name="login_empty_error">Username dan password tidak boleh kosong!</string>
+    <string name="register_empty_error">Semua kolom inputan wajib diisi!</string>
+    <string name="register_success">Registrasi Berhasil! Silahkan login dengan akun Anda.</string>
+    <string name="otp_empty_error">Kode OTP tidak boleh kosong!</string>
+    <string name="otp_invalid_error">Kode OTP tidak sesuai! Kode OTP harus sama dengan nomor handphone Anda.</string>
+    <string name="otp_dialog_title">Verifikasi Gagal</string>
+    <string name="otp_success">Verifikasi OTP Berhasil! Akun Anda telah terdaftar.</string>
     <string name="login_success">Login Berhasil!</string>
     <string name="logout_success">Anda telah keluar dari akun.</string>
     <string name="login_pref_info">Status login (isLogin) akan disimpan secara otomatis menggunakan SharedPreferences.</string>

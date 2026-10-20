@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_light"
     android:orientation="vertical"
-    tools:context=".Project.MembershipActivity">
+    tools:context=".Pages.MembershipActivity">
 
     <!-- Toolbar with Back Button -->
     <androidx.appcompat.widget.Toolbar
