@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.azb_sataandagi.DetailActivity
 import com.example.azb_sataandagi.DeveloperProfileActivity
-import com.example.azb_sataandagi.Project.MembershipActivity
+import com.example.azb_sataandagi.Pages.MembershipActivity
 import com.example.azb_sataandagi.WebActivity
 import com.example.azb_sataandagi.databinding.FragmentOthersBinding
 

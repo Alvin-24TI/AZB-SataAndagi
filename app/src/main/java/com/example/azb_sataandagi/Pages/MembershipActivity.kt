@@ -1,4 +1,4 @@
-package com.example.azb_sataandagi.Project
+package com.example.azb_sataandagi.Pages
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

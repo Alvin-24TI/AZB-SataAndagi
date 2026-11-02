@@ -1,4 +1,4 @@
-package com.example.azb_sataandagi.Project
+package com.example.azb_sataandagi.Pages
 
 import android.content.Intent
 import android.os.Bundle
@@ -44,9 +44,12 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         // Display User Info from Session
-        val user = sessionManager.username.ifEmpty { "User" }
-        binding.tvProfileName.text = "Nama: $user"
-        binding.tvProfileEmail.text = "Email: ${user.lowercase()}@gmail.com"
+        val name = sessionManager.fullName.ifEmpty { sessionManager.username.ifEmpty { "User" } }
+        val username = sessionManager.username.ifEmpty { "User" }
+        val phone = sessionManager.phone.ifEmpty { "-" }
+
+        binding.tvProfileName.text = "Nama: $name"
+        binding.tvProfileEmail.text = "Username: $username | No HP: $phone"
 
         binding.btnDevProfile.setOnClickListener {
             val intent = Intent(this, DeveloperProfileActivity::class.java)
