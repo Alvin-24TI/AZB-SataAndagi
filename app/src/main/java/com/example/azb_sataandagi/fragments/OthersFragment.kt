@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.azb_sataandagi.DetailActivity
 import com.example.azb_sataandagi.DeveloperProfileActivity
 import com.example.azb_sataandagi.Project.MembershipActivity
 import com.example.azb_sataandagi.WebActivity
@@ -28,6 +29,10 @@ class OthersFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val ctx = requireContext()
+
+        binding.btnDetails.setOnClickListener {
+            startActivity(Intent(ctx, DetailActivity::class.java))
+        }
 
         binding.btnMembership.setOnClickListener {
             startActivity(Intent(ctx, MembershipActivity::class.java))

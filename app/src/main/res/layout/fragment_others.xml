@@ -56,12 +56,26 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Detail Snack Button -->
+            <Button
+                android:id="@+id/btnDetails"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/accent"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="@string/btn_detail"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
             <!-- Membership Button -->
             <Button
                 android:id="@+id/btnMembership"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="12dp"
                 android:backgroundTint="@color/primary"
                 android:fontFamily="@font/jetbrains_mono_regular"
                 android:text="@string/btn_membership"

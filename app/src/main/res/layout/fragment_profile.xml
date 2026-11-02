@@ -96,12 +96,26 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Digital Member Card & QR Code Button -->
+            <Button
+                android:id="@+id/btnMemberQr"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/primary_dark"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="📱 Kartu &amp; QR Code Member"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
             <!-- Developer Profile Button -->
             <Button
                 android:id="@+id/btnDevProfile"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="12dp"
                 android:backgroundTint="@color/primary"
                 android:fontFamily="@font/jetbrains_mono_regular"
                 android:text="@string/btn_developer_profile"

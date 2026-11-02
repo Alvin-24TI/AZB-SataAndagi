@@ -34,16 +34,14 @@ class MainActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
 
         // Set initial fragment if launching for the first time
-        if (savedInstanceState == null) {
-            replaceFragment(HomeFragment())
-        }
 
-        // Handle Bottom Navigation item selections
+        replaceFragment(HomeFragment())
+        // Handle Bottom Navigation
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
