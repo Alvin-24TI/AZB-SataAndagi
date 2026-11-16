@@ -15,6 +15,9 @@
     <string name="title_web">YouTube Web Page</string>
     <string name="title_login">Login Akun</string>
     <string name="title_developer_profile">Developer Profile</string>
+    <string name="title_register_membership">Pendaftaran Membership</string>
+    <string name="title_register">Pendaftaran Akun</string>
+    <string name="title_otp">Verifikasi OTP</string>
 
     <!-- Bottom Navigation Labels -->
     <string name="menu_home">Home</string>
@@ -30,14 +33,34 @@
     <string name="btn_developer_profile">Profil Developer</string>
     <string name="btn_login">Login</string>
     <string name="btn_logout">Logout</string>
+    <string name="btn_to_register">Belum punya akun? Daftar</string>
+    <string name="btn_to_login">Sudah punya akun? Login</string>
+    <string name="btn_register">Daftar Akun</string>
+    <string name="btn_verify_otp">Verifikasi OTP</string>
+    <string name="btn_register_membership">Daftar Membership Cafe</string>
+    <string name="btn_submit_registration">Daftar Sekarang</string>
 
-    <!-- General Strings -->
+    <!-- General & Form Strings -->
     <string name="splash_footer">Sobremesa App v1.0</string>
     <string name="login_subtitle">Silahkan login ke akun Anda</string>
+    <string name="register_subtitle">Buat akun baru Cafe Sobremesa</string>
+    <string name="otp_subtitle">Masukkan kode verifikasi OTP</string>
     <string name="hint_username">Username / Email</string>
     <string name="hint_password">Password</string>
+    <string name="hint_nama">Nama Lengkap</string>
+    <string name="hint_phone">Nomor HP / WhatsApp</string>
+    <string name="hint_email">Alamat Email</string>
+    <string name="hint_otp">Kode OTP</string>
+    <string name="hint_full_name">Nama Lengkap Member</string>
     <string name="login_empty_error">Username dan password tidak boleh kosong!</string>
+    <string name="register_empty_error">Mohon lengkapi seluruh data pendaftaran!</string>
+    <string name="otp_empty_error">Kode OTP tidak boleh kosong!</string>
+    <string name="otp_invalid_error">Kode OTP salah! Masukkan 1234</string>
+    <string name="otp_dialog_title">Registrasi Berhasil</string>
+    <string name="otp_success">Verifikasi OTP Berhasil!</string>
+    <string name="registerUser">User terdaftar</string>
     <string name="login_success">Login Berhasil!</string>
+    <string name="register_success">Pendaftaran Membership Cafe Sobremesa Berhasil!</string>
     <string name="logout_success">Anda telah keluar dari akun.</string>
     <string name="login_pref_info">Status login (isLogin) akan disimpan secara otomatis menggunakan SharedPreferences.</string>
 </resources>

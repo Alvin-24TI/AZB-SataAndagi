@@ -56,12 +56,26 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Menu Catalog Button -->
+            <Button
+                android:id="@+id/btnMenu"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="🍩 Katalog Menu Cafe (RecyclerView)"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
             <!-- Detail Snack Button -->
             <Button
                 android:id="@+id/btnDetails"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="12dp"
                 android:backgroundTint="@color/accent"
                 android:fontFamily="@font/jetbrains_mono_regular"
                 android:text="@string/btn_detail"
@@ -76,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary"
+                android:backgroundTint="@color/primary_light"
                 android:fontFamily="@font/jetbrains_mono_regular"
                 android:text="@string/btn_membership"
                 android:textColor="@color/white"
@@ -104,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary_light"
+                android:backgroundTint="@color/text_secondary"
                 android:fontFamily="@font/jetbrains_mono_regular"
                 android:text="@string/btn_youtube"
                 android:textColor="@color/white"

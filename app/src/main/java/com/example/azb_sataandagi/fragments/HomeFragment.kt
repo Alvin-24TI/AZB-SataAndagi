@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.azb_sataandagi.DetailActivity
-import com.example.azb_sataandagi.Project.HomePageActivity
-import com.example.azb_sataandagi.WebActivity
+import com.example.azb_sataandagi.MemberListActivity
+import com.example.azb_sataandagi.MemberQrActivity
+import com.example.azb_sataandagi.QrScannerActivity
+import com.example.azb_sataandagi.RegisterMembershipActivity
+import com.example.azb_sataandagi.VoucherActivity
 import com.example.azb_sataandagi.databinding.FragmentHomeBinding
 import com.example.azb_sataandagi.utils.SessionManager
 
@@ -35,16 +37,24 @@ class HomeFragment : Fragment() {
             binding.tvWelcomeUser.text = "Selamat Datang, $username!"
         }
 
-        binding.btnToProject.setOnClickListener {
-            startActivity(Intent(ctx, HomePageActivity::class.java))
+        binding.btnRegisterMembership.setOnClickListener {
+            startActivity(Intent(ctx, RegisterMembershipActivity::class.java))
         }
 
-        binding.btnWeb.setOnClickListener {
-            startActivity(Intent(ctx, WebActivity::class.java))
+        binding.btnMemberQr.setOnClickListener {
+            startActivity(Intent(ctx, MemberQrActivity::class.java))
         }
 
-        binding.btnDetails.setOnClickListener {
-            startActivity(Intent(ctx, DetailActivity::class.java))
+        binding.btnScanQr.setOnClickListener {
+            startActivity(Intent(ctx, QrScannerActivity::class.java))
+        }
+
+        binding.btnMemberList.setOnClickListener {
+            startActivity(Intent(ctx, MemberListActivity::class.java))
+        }
+
+        binding.btnVouchers.setOnClickListener {
+            startActivity(Intent(ctx, VoucherActivity::class.java))
         }
     }
 

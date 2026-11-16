@@ -78,6 +78,11 @@
             android:windowSoftInputMode="adjustResize" />
 
         <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
             android:name=".DeveloperProfileActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
