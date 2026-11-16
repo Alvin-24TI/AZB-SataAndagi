@@ -20,23 +20,15 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <com.google.android.material.card.MaterialCardView
+            <!-- Avatar polos -->
+            <ImageView
+                android:id="@+id/imgAvatar"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="16dp"
-                app:cardCornerRadius="70dp"
-                app:cardElevation="4dp"
-                app:strokeColor="@color/primary"
-                app:strokeWidth="2dp">
-
-                <ImageView
-                    android:id="@+id/imgAvatar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/title_profile"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/logo" />
-            </com.google.android.material.card.MaterialCardView>
+                android:contentDescription="@string/title_profile"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,95 +40,105 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.card.MaterialCardView
+            <!-- Info profil polos, tanpa card -->
+            <TextView
+                android:id="@+id/tvProfileName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/card_background"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:strokeColor="@color/primary_light"
-                app:strokeWidth="1dp">
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Nama: User"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+            <TextView
+                android:id="@+id/tvProfileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Email: user@gmail.com"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/tvProfileName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Nama: User"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Status: Active Member"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tvProfileEmail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Email: user@gmail.com"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/primary_light" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Status: Active Member"
-                        android:textColor="@color/primary"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Digital Member Card & QR Code Button -->
+            <!-- Kartu & QR Code Member -->
             <Button
                 android:id="@+id/btnMemberQr"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/primary_dark"
+                android:layout_marginTop="4dp"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="📱 Kartu &amp; QR Code Member"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Developer Profile Button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
+            <!-- Lihat Membership Button -->
             <Button
-                android:id="@+id/btnDevProfile"
+                android:id="@+id/btnMembership"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
-                android:text="@string/btn_developer_profile"
-                android:textColor="@color/white"
+                android:gravity="start|center_vertical"
+                android:text="@string/btn_membership"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Logout Button -->
-            <Button
-                android:id="@+id/btnLogout"
+            <!-- Card Tombol Logout (Warna Kontras di Tengah Bawah) -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/accent"
-                android:fontFamily="@font/jetbrains_mono_regular"
-                android:text="@string/btn_logout"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/accent"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/primary_dark"
+                app:strokeWidth="1.5dp">
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:fontFamily="@font/jetbrains_mono_regular"
+                    android:gravity="center"
+                    android:text="@string/btn_logout"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>

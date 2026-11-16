@@ -12,7 +12,7 @@
     <string name="title_home">Home Page</string>
     <string name="title_profile">Profile Page</string>
     <string name="title_membership">Membership</string>
-    <string name="title_web">YouTube Web Page</string>
+    <string name="title_web">Sobremesa Website</string>
     <string name="title_login">Login Akun</string>
     <string name="title_developer_profile">Developer Profile</string>
     <string name="title_register_membership">Pendaftaran Membership</string>
@@ -27,7 +27,7 @@
     <!-- Button Labels -->
     <string name="btn_home">Ke Halaman Home</string>
     <string name="btn_detail">Detail Snack</string>
-    <string name="btn_youtube">Buka YouTube (Web)</string>
+    <string name="btn_youtube">Akses Website Kami</string>
     <string name="btn_profile">Lihat Profile</string>
     <string name="btn_membership">Lihat Membership</string>
     <string name="btn_developer_profile">Profil Developer</string>

@@ -20,22 +20,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed">
 
-        <com.google.android.material.card.MaterialCardView
+        <!-- Logo polos, tanpa bungkus card lingkaran -->
+        <ImageView
+            android:id="@+id/imgSplashLogo"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            app:cardCornerRadius="70dp"
-            app:cardElevation="6dp"
-            app:strokeColor="@color/primary"
-            app:strokeWidth="3dp">
-
-            <ImageView
-                android:id="@+id/imgSplashLogo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/app_name"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/logo" />
-        </com.google.android.material.card.MaterialCardView>
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/tvSplashTitle"

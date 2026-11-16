@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.azb_sataandagi.DetailActivity
 import com.example.azb_sataandagi.DeveloperProfileActivity
-import com.example.azb_sataandagi.MenuActivity
-import com.example.azb_sataandagi.Pages.MembershipActivity
+import com.example.azb_sataandagi.MemberListActivity
+import com.example.azb_sataandagi.RegisterMembershipActivity
 import com.example.azb_sataandagi.WebActivity
 import com.example.azb_sataandagi.databinding.FragmentOthersBinding
 
@@ -31,20 +31,20 @@ class OthersFragment : Fragment() {
 
         val ctx = requireContext()
 
-        binding.btnMenu.setOnClickListener {
-            startActivity(Intent(ctx, MenuActivity::class.java))
+        binding.btnRegisterMembership.setOnClickListener {
+            startActivity(Intent(ctx, RegisterMembershipActivity::class.java))
         }
 
-        binding.btnDetails.setOnClickListener {
-            startActivity(Intent(ctx, DetailActivity::class.java))
-        }
-
-        binding.btnMembership.setOnClickListener {
-            startActivity(Intent(ctx, MembershipActivity::class.java))
+        binding.btnMemberList.setOnClickListener {
+            startActivity(Intent(ctx, MemberListActivity::class.java))
         }
 
         binding.btnDeveloperProfile.setOnClickListener {
             startActivity(Intent(ctx, DeveloperProfileActivity::class.java))
+        }
+
+        binding.btnDetails.setOnClickListener {
+            startActivity(Intent(ctx, DetailActivity::class.java))
         }
 
         binding.btnYouTube.setOnClickListener {

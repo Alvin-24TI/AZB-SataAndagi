@@ -56,75 +56,101 @@
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp" />
 
-            <!-- Profile Menu Button -->
+            <!-- Daftar menu: baris teks datar, bukan tombol penuh warna -->
             <Button
                 android:id="@+id/btnProfile"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/primary"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_profile"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Developer Profile Button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
             <Button
                 android:id="@+id/btnDeveloperProfile"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary_dark"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_developer_profile"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Membership Menu Button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
             <Button
                 android:id="@+id/btnMembership"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary_light"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_membership"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Detail Snack Button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
             <Button
                 android:id="@+id/btnDetailSnack"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/accent"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_detail"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- YouTube Web Button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
             <Button
                 android:id="@+id/btnYouTubeWeb"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary_dark"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_youtube"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

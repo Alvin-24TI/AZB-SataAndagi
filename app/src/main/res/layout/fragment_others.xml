@@ -19,112 +19,131 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
+            <!-- Header polos: judul + teks, tanpa card -->
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/card_background"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:strokeColor="@color/primary"
-                app:strokeWidth="2dp">
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Fitur &amp; Informasi Lainnya"
+                android:textColor="@color/primary_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:lineSpacingExtra="4dp"
+                android:text="Pilih menu di bawah ini untuk melihat fitur tambahan Sobremesa Sata Andagi App:"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Fitur &amp; Informasi Lainnya"
-                        android:textColor="@color/primary_dark"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/primary_light" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:lineSpacingExtra="4dp"
-                        android:text="Pilih menu di bawah ini untuk melihat fitur tambahan Sobremesa Sata Andagi App:"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Menu Catalog Button -->
+            <!-- Register Membership Button (MOVED TO LAINNYA) -->
             <Button
-                android:id="@+id/btnMenu"
+                android:id="@+id/btnRegisterMembership"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/primary"
+                android:layout_marginTop="4dp"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
-                android:text="🍩 Katalog Menu Cafe (RecyclerView)"
-                android:textColor="@color/white"
+                android:gravity="start|center_vertical"
+                android:text="@string/btn_register_membership"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
+            <!-- View Member List Button (MOVED TO LAINNYA) -->
+            <Button
+                android:id="@+id/btnMemberList"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
+                android:text="Lihat Member Terdaftar"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
+            <!-- Developer Profile Button (MOVED TO LAINNYA) -->
+            <Button
+                android:id="@+id/btnDeveloperProfile"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
+                android:text="@string/btn_developer_profile"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
 
             <!-- Detail Snack Button -->
             <Button
                 android:id="@+id/btnDetails"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/accent"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_detail"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Membership Button -->
-            <Button
-                android:id="@+id/btnMembership"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary_light"
-                android:fontFamily="@font/jetbrains_mono_regular"
-                android:text="@string/btn_membership"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
-
-            <!-- Developer Profile Button -->
-            <Button
-                android:id="@+id/btnDeveloperProfile"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/primary_dark"
-                android:fontFamily="@font/jetbrains_mono_regular"
-                android:text="@string/btn_developer_profile"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
 
             <!-- YouTube Button -->
             <Button
                 android:id="@+id/btnYouTube"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/text_secondary"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_youtube"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

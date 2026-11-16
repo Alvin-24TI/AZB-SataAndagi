@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.azb_sataandagi.DeveloperProfileActivity
 import com.example.azb_sataandagi.LoginActivity
 import com.example.azb_sataandagi.MemberQrActivity
+import com.example.azb_sataandagi.Pages.MembershipActivity
 import com.example.azb_sataandagi.R
 import com.example.azb_sataandagi.databinding.FragmentProfileBinding
 import com.example.azb_sataandagi.utils.SessionManager
@@ -43,8 +43,8 @@ class ProfileFragment : Fragment() {
             startActivity(Intent(ctx, MemberQrActivity::class.java))
         }
 
-        binding.btnDevProfile.setOnClickListener {
-            startActivity(Intent(ctx, DeveloperProfileActivity::class.java))
+        binding.btnMembership.setOnClickListener {
+            startActivity(Intent(ctx, MembershipActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {

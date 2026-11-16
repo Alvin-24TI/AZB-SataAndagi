@@ -30,23 +30,15 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <com.google.android.material.card.MaterialCardView
+            <!-- Avatar polos -->
+            <ImageView
+                android:id="@+id/imgAvatar"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_marginTop="16dp"
-                app:cardCornerRadius="70dp"
-                app:cardElevation="4dp"
-                app:strokeColor="@color/primary"
-                app:strokeWidth="2dp">
-
-                <ImageView
-                    android:id="@+id/imgAvatar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/title_profile"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/logo" />
-            </com.google.android.material.card.MaterialCardView>
+                android:contentDescription="@string/title_profile"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -58,81 +50,78 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <com.google.android.material.card.MaterialCardView
+            <!-- Info profil polos, tanpa card -->
+            <TextView
+                android:id="@+id/tvProfileName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="@color/card_background"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:strokeColor="@color/primary_light"
-                app:strokeWidth="1dp">
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Nama: Alvin"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+            <TextView
+                android:id="@+id/tvProfileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Email: alvinSnack@gmail.com"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/tvProfileName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Nama: Alvin"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/jetbrains_mono_regular"
+                android:text="Status: Active Member"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/tvProfileEmail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Email: alvinSnack@gmail.com"
-                        android:textColor="@color/text_primary"
-                        android:textSize="14sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/primary_light" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/jetbrains_mono_regular"
-                        android:text="Status: Active Member"
-                        android:textColor="@color/primary"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Developer Profile Button -->
+            <!-- Daftar aksi: baris teks datar, bukan tombol penuh warna -->
             <Button
                 android:id="@+id/btnDevProfile"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="24dp"
-                android:backgroundTint="@color/primary"
+                android:layout_marginTop="4dp"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_developer_profile"
-                android:textColor="@color/white"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
-            <!-- Logout Button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/primary_light" />
+
             <Button
                 android:id="@+id/btnLogout"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/accent"
+                android:drawableEnd="@drawable/ic_chevron_right"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/jetbrains_mono_regular"
+                android:gravity="start|center_vertical"
                 android:text="@string/btn_logout"
-                android:textColor="@color/white"
+                android:textColor="@color/accent"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="12dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
