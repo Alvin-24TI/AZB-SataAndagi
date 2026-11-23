@@ -7,8 +7,10 @@ import com.example.azb_sataandagi.databinding.ItemMenuBinding
 import com.example.azb_sataandagi.model.MenuItem
 
 class MenuAdapter(
-    private val menuList: List<MenuItem>,
-    private val onItemClick: (MenuItem) -> Unit
+    private var menuList: List<MenuItem>,
+    private val onItemClick: (MenuItem) -> Unit,
+    private val onEditClick: (MenuItem) -> Unit,
+    private val onDeleteClick: (MenuItem) -> Unit
 ) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     class MenuViewHolder(val binding: ItemMenuBinding) :
@@ -18,6 +20,11 @@ class MenuAdapter(
         val binding =
             ItemMenuBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MenuViewHolder(binding)
+    }
+
+    fun updateList(newList: List<MenuItem>) {
+        menuList = newList
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
@@ -31,6 +38,12 @@ class MenuAdapter(
 
             root.setOnClickListener {
                 onItemClick(item)
+            }
+            btnEditMenu.setOnClickListener {
+                onEditClick(item)
+            }
+            btnDeleteMenu.setOnClickListener {
+                onDeleteClick(item)
             }
         }
     }

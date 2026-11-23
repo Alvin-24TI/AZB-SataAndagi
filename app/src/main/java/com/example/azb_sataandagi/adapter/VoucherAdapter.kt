@@ -8,8 +8,10 @@ import com.example.azb_sataandagi.databinding.ItemVoucherBinding
 import com.example.azb_sataandagi.model.Voucher
 
 class VoucherAdapter(
-    private val voucherList: List<Voucher>,
-    private val onRedeemClick: (Voucher) -> Unit
+    private var voucherList: List<Voucher>,
+    private val onRedeemClick: (Voucher) -> Unit,
+    private val onEditClick: (Voucher) -> Unit,
+    private val onDeleteClick: (Voucher) -> Unit
 ) : RecyclerView.Adapter<VoucherAdapter.VoucherViewHolder>() {
 
     class VoucherViewHolder(val binding: ItemVoucherBinding) :
@@ -19,6 +21,11 @@ class VoucherAdapter(
         val binding =
             ItemVoucherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return VoucherViewHolder(binding)
+    }
+
+    fun updateList(newList: List<Voucher>) {
+        voucherList = newList
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: VoucherViewHolder, position: Int) {
@@ -40,6 +47,13 @@ class VoucherAdapter(
                 btnRedeemVoucher.setOnClickListener {
                     onRedeemClick(voucher)
                 }
+            }
+
+            btnEditVoucher.setOnClickListener {
+                onEditClick(voucher)
+            }
+            btnDeleteVoucher.setOnClickListener {
+                onDeleteClick(voucher)
             }
         }
     }

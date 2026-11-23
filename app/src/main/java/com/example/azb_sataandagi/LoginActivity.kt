@@ -7,8 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.azb_sataandagi.api.RetrofitClient
 import com.example.azb_sataandagi.databinding.ActivityLoginBinding
 import com.example.azb_sataandagi.utils.SessionManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -39,28 +44,55 @@ class LoginActivity : AppCompatActivity() {
             val username = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString().trim()
 
-            val regUser = sessionManager.registeredUsername
-            val regPass = sessionManager.registeredPassword
-
-            val isValidLogin = if (regUser.isNotEmpty()) {
-                (username == regUser && password == regPass) || (username == password)
-            } else {
-                username == password
-            }
-
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, getString(R.string.login_empty_error), Toast.LENGTH_SHORT).show()
-            } else if (isValidLogin) {
-                sessionManager.isLogin = true
-                sessionManager.username = username
+                return@setOnClickListener
+            }
 
-                Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show()
+            // Authenticate with Supabase Users Table
+            lifecycleScope.launch(Dispatchers.IO) {
+                var loginSuccess = false
+                var isSupabaseChecked = false
 
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                Toast.makeText(this, "Login Gagal! Username atau password salah.", Toast.LENGTH_SHORT).show()
+                try {
+                    val response = RetrofitClient.instance.getUsers("eq.$username")
+                    if (response.isSuccessful && !response.body().isNullOrEmpty()) {
+                        isSupabaseChecked = true
+                        val user = response.body()!![0]
+                        if (user.password == password) {
+                            loginSuccess = true
+                            sessionManager.registerUser(user.nama, user.phone, user.username, user.password)
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+                // Fallback to local session check if offline or not checked in Supabase
+                if (!isSupabaseChecked) {
+                    val regUser = sessionManager.registeredUsername
+                    val regPass = sessionManager.registeredPassword
+                    if (regUser.isNotEmpty()) {
+                        loginSuccess = (username == regUser && password == regPass) || (username == password)
+                    } else {
+                        loginSuccess = (username == password)
+                    }
+                }
+
+                withContext(Dispatchers.Main) {
+                    if (loginSuccess) {
+                        sessionManager.isLogin = true
+                        sessionManager.username = username
+
+                        Toast.makeText(this@LoginActivity, getString(R.string.login_success), Toast.LENGTH_SHORT).show()
+
+                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this@LoginActivity, "Login Gagal! Username atau password salah.", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
         }
 
@@ -68,7 +100,5 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

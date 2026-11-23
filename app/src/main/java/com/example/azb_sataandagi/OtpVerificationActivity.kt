@@ -7,9 +7,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.azb_sataandagi.api.RetrofitClient
 import com.example.azb_sataandagi.databinding.ActivityOtpVerificationBinding
+import com.example.azb_sataandagi.model.User
 import com.example.azb_sataandagi.utils.SessionManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class OtpVerificationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOtpVerificationBinding
@@ -54,16 +60,27 @@ class OtpVerificationActivity : AppCompatActivity() {
                     .setPositiveButton("OK", null)
                     .show()
             } else {
-                // Save data to SharedPreferences only when OTP verification succeeds
+                // Save data to SharedPreferences
                 sessionManager.registerUser(nama, phone, username, password)
 
-                Toast.makeText(this, getString(R.string.otp_success), Toast.LENGTH_SHORT).show()
+                // Insert into Supabase Users Table
+                lifecycleScope.launch(Dispatchers.IO) {
+                    try {
+                        val newUser = User(nama = nama, phone = phone, username = username, password = password)
+                        RetrofitClient.instance.insertUser(newUser)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@OtpVerificationActivity, "${getString(R.string.otp_success)} (Tersimpan ke Supabase)", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.putExtra("REGISTERED_USERNAME", username)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-                finish()
+                        val intent = Intent(this@OtpVerificationActivity, LoginActivity::class.java)
+                        intent.putExtra("REGISTERED_USERNAME", username)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                        finish()
+                    }
+                }
             }
         }
     }
